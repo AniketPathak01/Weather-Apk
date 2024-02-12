@@ -1,26 +1,20 @@
 import React from "react";
 import { GrLocation } from "react-icons/gr";
 
+
 function Temperature({ setCity, stats }) {
   const handleCityChange = (e) => {
     setCity(e.target.value);
   };
 
-  const weekdays = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
+  const formatDate = (dateStr) => {
+    const options = {
+      weekday: "long",
+    };
+    return new Intl.DateTimeFormat("en-US", options).format(new Date(dateStr));
+  };
 
-  const currentDate = new Date();
-
-  const weekdayIndex = currentDate.getDay();
-
-  const currentDay = weekdays[weekdayIndex];
+  const currentDay = formatDate(stats.time); // Format the current date
 
   return (
     <>
