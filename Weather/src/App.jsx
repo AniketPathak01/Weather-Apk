@@ -42,11 +42,11 @@ function App() {
             />
           )}
         </div>
-        <div className="mt-40 w-1/3 h-1/3 p-10 grid grid-cols-2 gap-6">
-          <h2 className="text-slate-200 text-2xl col-span-2">
-            Today's Highlights
-          </h2>
-          {weatherData && (
+        {weatherData && (
+          <div className="mt-40 w-1/3 h-1/3 p-10 grid grid-cols-2 gap-6">
+            <h2 className="text-slate-200 text-2xl col-span-2">
+              Today's Highlights
+            </h2>
             <>
               <Highlights
                 stats={{
@@ -78,8 +78,8 @@ function App() {
                 }}
               />
             </>
-          )}
-        </div>
+          </div>
+        )}
       </div>
     </>
   );
