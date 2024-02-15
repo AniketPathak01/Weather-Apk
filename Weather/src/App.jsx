@@ -17,7 +17,7 @@ function App() {
         return response.json();
       })
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         setWeatherData(data);
       })
       .catch((e) => {
@@ -27,7 +27,7 @@ function App() {
 
   return (
     <>
-      <div className="bg-[#1F213A] h-screen flex justify-center align-top">
+      <div className="bg-[#000000] h-screen flex justify-center align-top ">
         <div className="mt-40 w-1/5 h-1/3 ">
           {weatherData && (
             <Temperature
